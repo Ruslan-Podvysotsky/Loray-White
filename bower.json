@@ -1,0 +1,14 @@
+{
+  "name": "builder",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "wow": "wowjs#^1.1.2",
+    "owl.carousel": "^2.3.4"
+  }
+}

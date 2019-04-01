@@ -1,0 +1,35 @@
+{
+  "name": "builder",
+  "version": "1.0.0",
+  "author": "Aleksandr",
+  "license": "ISC",
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "github:gulpjs/gulp",
+    "gulp-autoprefixer": "6.0.0",
+    "gulp-cheerio": "^0.6.3",
+    "gulp-concat": "2.6.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-eslint": "5.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-notify": "3.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "2.6.4",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^2.1.0",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "bower": "^1.8.4",
+    "gulp-cli": "^2.0.1",
+    "normalize.css": "^8.0.0",
+    "python": "0.0.4",
+    "sass": "^1.14.3"
+  }
+}
