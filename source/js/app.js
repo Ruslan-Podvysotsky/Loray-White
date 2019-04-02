@@ -265,3 +265,17 @@ $(document).on('click', 'a[href^="#"]', function (event) {
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 1000);
 });
+
+
+$('.skintone-range').click(function(){
+    $(this).siblings('.skintone-text').fadeOut();
+    var num = $(this).siblings('img').attr('src');
+    var value = $(this).val();
+    var imgSrc = num.slice(0, -5) + value + '.png';
+    $(this).siblings('img').attr('src', imgSrc);
+});
+
+
+
+
+
