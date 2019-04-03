@@ -267,7 +267,7 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 });
 
 
-$('.skintone-range').click(function(){
+$('.skintone-range').click(function () {
     $(this).siblings('.skintone-text').fadeOut();
     var num = $(this).siblings('img').attr('src');
     var value = $(this).val();
@@ -280,49 +280,39 @@ let slider1 = $('.table__slider');
 
 function initSlider(slider, options) {
     slider.on('init', function () {
-      setTimeout(function () {
-        slider.addClass('is-ready');
-      }, 100);
+        setTimeout(function () {
+            slider.addClass('is-ready');
+        }, 100);
     });
     slider.not('.slick-initialized').slick(options);
-  }
-  
-  function destroySlider(slider) {
+}
+
+function destroySlider(slider) {
     if (slider.hasClass('slick-initialized')) {
-      slider.slick('unslick');
+        slider.slick('unslick');
     }
-  }
-  
-  function showSlider() {
+}
+
+function showSlider() {
     var tablet = ($(window).width()) < 640;
     if (tablet) {
-      initSlider(slider1, {
-          responsive: [{
-              breakpoint: 640,
-              settings: {
-                slidesToShow: 2,
-                infinite: false,
-                slidesToScroll: 1
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                infinite: false,
-                slidesToScroll: 1,
-                adaptiveHeight: true
-              }
-            }
-          ]
-      });
+        initSlider(slider1, {
+            slidesToShow: 2,
+            infinite: false,
+            slidesToScroll: 1,
+            responsive: [{
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    infinite: false,
+                    slidesToScroll: 1,
+                    adaptiveHeight: true
+                }
+            }]
+        });
     } else {
-      destroySlider(slider1);
+        destroySlider(slider1);
     }
-  };
-  showSlider();
-  $(window).on('resize', showSlider);
-
-
-
-
+};
+showSlider();
+$(window).on('resize', showSlider);
