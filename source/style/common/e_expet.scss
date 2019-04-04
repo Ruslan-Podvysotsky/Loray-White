@@ -1,0 +1,151 @@
+.expert{
+    background: url(../img/bg_expert.png), #f2f2f2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+    padding-top: 93px;
+    padding-bottom: 94px;
+    &__cont{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+    }
+    &__woman{
+        width: 537px;
+        position: absolute;
+        left: -47px;
+        bottom: -94px;
+        z-index: 1;
+        & img{
+            width: 100%;
+            display: block;
+        }
+        &::before{
+            content: '';
+            width: 409px;
+            height: 167px;
+            background-size: 429px;
+            background-image: url(../img/expert_before.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: 0;
+            left: -226px;
+            z-index: -1;
+        }
+    }
+    &__opinion{
+        width: 670px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 59px;
+    }
+    &__name{
+        color: #3c4452;
+        font-weight: bold;
+        font-size: 26px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &_profesion{
+            font-size: 20px;
+            color: #e16ec7;
+            font-style: italic;
+            font-weight: 400;
+        }
+    }
+    &__description{
+        margin-top: 28px;
+        color: #56595e;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.4;
+        &_color{
+            color: #3c4452;
+            font-weight: bold;
+        }
+        &_margin{
+            margin-top: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px){
+    .expert__opinion{
+        max-width: 530px;
+        width: 100%;
+        margin-top: 39px;
+    }
+    .expert__woman{
+        left: -57px;
+        bottom: -60px;
+        width: 507px;
+    }
+    .expert__description{
+        margin-top: 15px;
+        font-size: 18px;
+        &_margin{
+            margin-top: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px){
+    .expert__cont{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .expert__woman{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 367px;
+        margin-top: 15px;
+        margin-bottom: -40px;
+        margin-right: -170px;
+    }
+    .expert__opinion{
+        margin-top: 20px;
+    }
+    .expert__description{
+        font-size: 16px;
+    }
+    .expert__name{
+        font-size: 21px;
+        &_profesion{
+            font-size: 16px;
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .expert__woman{
+        margin-bottom: -30px;
+    }
+}
+
+@media screen and (max-width: 639px){
+    .expert__woman{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 479px){
+    .title_br br{
+        display: none;
+    }
+    .expert__opinion{
+        text-align: center;
+        align-items: center;
+    }
+    .expert__name{
+        align-items: center;
+        text-align: center;
+    }
+    .expert__description {
+        margin-top: 10px;
+        &_margin{
+            margin-top: 10px;
+        }
+    }
+}

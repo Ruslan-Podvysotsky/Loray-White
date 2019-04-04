@@ -1,0 +1,267 @@
+.instruction{
+    background-image: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: 75px;
+    padding-bottom: 0;
+    z-index: 1;
+    &::before{
+        content: '';
+        width: 620px;
+        height: 591px;
+        background-image: url(../img/bg_leaves.png);
+        background-size: 100% 100%;
+        position: absolute;
+        right: 34px;
+        top: -90px;
+        z-index: -1;
+    }
+    &__wrapper{
+        background-image: url(../img/bg_square.png);
+        background-repeat: no-repeat;
+        background-position: 348px 152px;
+        padding-bottom: 279px;
+    }
+    &__cont{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        margin-top: 63px;
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 15px;
+        &-item{
+            font-size: 32px;
+            color: #3c4452;
+            font-weight: lighter;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            line-height: 1.07;
+            margin-top: 30px;
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+        &-number{
+            color: #3c4452;
+            font-size: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e9c7b8;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 36px;
+            box-shadow: 0px 5px 31px 0px rgba(237,220,217,1);
+            &_second{
+                background-color: #f8e4db;
+                margin-left: 50px;
+            }
+            &_third{
+                background-color: #fef2ed;
+                margin-left: 100px;
+            }
+            
+        }
+    }
+    &__product{
+        position: absolute;
+        bottom: -368px;
+        left: 1px;
+        z-index: 1;
+        &-one{
+            width: 420px;
+            & img{
+                width: 100%;
+                display: block;
+            }
+        }
+        &-two{
+            position: absolute;
+            top: 81px;
+            right: -60px;
+            width: 291px;
+            & img{
+                width: 100%;
+                display: block;
+            }
+        }
+        &::before{
+            content: '';
+            width: 429px;
+            height: 327px;
+            background-image: url(../img/product_after.png);
+            z-index: -1;
+            position: absolute;
+            right: -214px;
+            top: -11px;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+    }
+    &__woman{
+        position: absolute;
+        bottom: -279px;
+        right: -36px;
+        width: 703px;
+        & img{
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px){
+    .instruction.section{
+        padding-bottom: 0;
+    }
+    .instruction::before{
+        right: -366px;
+    }
+    .instruction__wrapper{
+        background-position: center bottom;
+    }
+    .instruction__woman{
+        right: -56px;
+        width: 663px;
+    }
+    .instruction__list-item{
+        font-size: 26px;
+        margin-top: 20px;
+    }
+    .instruction__list-number{
+        font-size: 50px;
+        width: 90px;
+        height: 90px;
+        margin-right: 26px;
+    }
+    .instruction__list-number_second{
+        margin-left: 30px;
+    }
+    .instruction__list-number_third{
+        margin-left: 80px;
+    }
+    .instruction__product{
+        bottom: -308px;
+        &-one{
+            width: 380px;
+        }
+        &-two{
+            width: 251px;
+            right: -43px;
+        }
+    }
+    .instruction__product::before {
+        content: '';
+        width: 330px;
+        height: 257px;
+        right: -164px;
+        top: 29px;
+        background-size: 330px;
+    }
+}
+
+@media screen and (max-width: 1023px){
+    .instruction__wrapper{
+        padding-bottom: 239px;
+        background-size: 440px;
+    }
+    .instruction__list-item{
+        font-size: 21px;
+        margin-top: 20px;
+    }
+    .instruction__list-number{
+        font-size: 40px;
+        width: 70px;
+        height: 70px;
+        margin-right: 16px;
+    }
+    .instruction__list-number_second{
+        margin-left: 20px;
+    }
+    .instruction__list-number_third{
+        margin-left: 50px;
+    }
+    .instruction__woman {
+        right: -106px;
+        width: 573px;
+        bottom: -239px;
+    }
+    .instruction__product{
+        bottom: -268px;
+    }
+    .instruction__product-one{
+        width: 330px;
+    }
+    .instruction__product-two{
+        width: 221px;
+        right: -38px;
+        top: 65px;
+    }
+    .instruction__product::before{
+        background-size: 290px;
+        width: 290px;
+        height: 227px;
+    }
+    .instruction .title{
+        text-shadow: 2px 2px 2px #fff;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .instruction__wrapper{
+        padding-bottom: 194px;
+        background-image: none;
+    }
+    .instruction__cont{
+        margin-top: 30px;
+    }
+    .instruction__list-item{
+        font-size: 19px;
+        margin-top: 15px;
+    }
+    .instruction__list-number{
+        width: 70px;
+        height: 70px;
+        font-size: 40px;
+        margin-right: 10px;
+    }
+    .instruction__list-number_second{
+        margin-left: 10px;
+    }
+    .instruction__list-number_third{
+        margin-left: 24px;
+    }
+    .instruction__woman {
+        right: -66px;
+        width: 453px;
+        bottom: -194px;
+    }
+    .instruction__product{
+        bottom: -218px;
+    }
+    .instruction__product-one{
+        width: 270px;
+    }
+    .instruction__product-two{
+        width: 171px;
+        right: -22px;
+        top: 55px;
+    }
+    .instruction__product::before {
+        background-size: 220px;
+        width: 220px;
+        height: 167px;
+        right: -84px;
+    }
+}

@@ -1,6 +1,7 @@
 .skintone {
     background: url('../img/skintone-bg.png')no-repeat center top 392px, url('../img/wave.png')no-repeat center bottom -2px;
     padding-top: 205px;
+    padding-bottom: 43px;
     .title {
         line-height: 1;
     }
@@ -149,8 +150,14 @@
     .skintone {
         background-position: center center;
     }
+    .skintone.section{
+        padding-top: 150px;
+    }
 }
 @media screen and (max-width: 1023px){
+    .skintone.section{
+        padding-top: 80px;
+    }
     .skintone {
         .skintone-left__text {
             font-size: 18px;
@@ -243,6 +250,9 @@
     }
 }
 @media screen and (max-width: 639px){
+    .skintone.section{
+        padding-top: 50px;
+    }
     .skintone {
         .title {
             br {
