@@ -265,3 +265,28 @@
         right: -84px;
     }
 }
+
+@media screen and (max-width: 639px){
+    .instruction__woman{
+        display: none;
+    }
+    .instruction__list-number_second{
+        margin-left: 0;
+    }
+    .instruction__list-number_third{
+        margin-left: 0;
+    }
+    .instruction__list{
+        margin: 0 auto;
+    }
+    .instruction__product{
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .instruction__cont{
+        margin-top: 15px;
+    }
+    .instruction::before{
+        right: -476px;
+    }
+}
