@@ -316,3 +316,10 @@ function showSlider() {
 };
 showSlider();
 $(window).on('resize', showSlider);
+
+$('.reviews__left-btn').click(function(){
+   $(this).toggleClass('active');
+   $('.reviews__item_hide').toggleClass('active');
+});
+
+
