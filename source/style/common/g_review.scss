@@ -89,6 +89,125 @@
     &__right-btn {
         font-size: 20px;
     }
+    &__popup {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: none;
+    }
+    &__table {
+        width: 520px;
+        border-radius: 10px;
+        background: #fff;
+        padding: 25px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    &__close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 27px;
+        width: 27px;
+        cursor: pointer;
+        &::before {
+            content: "";
+            height: 2px;
+            width: 30px;
+            background: #000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%) rotate(45deg);
+            -ms-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &::after {
+            content: "";
+            height: 2px;
+            width: 30px;
+            background: #000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+            -ms-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+    &__popup-title {
+        font-size: 38px;
+        margin-bottom: 15px;
+        font-weight: 400;
+        text-align: center;
+    }
+    &__inputs {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        color: #666666;
+        font-size: 16px;
+        input {
+            width: 48%;
+            outline: none;
+            padding-left: 52px;
+            padding-right: 20px;
+            height: 58px;
+            -webkit-box-shadow: inset 2px 3px 5px rgba(34, 35, 39, 0.09);
+            box-shadow: inset 2px 3px 5px rgba(34, 35, 39, 0.09);
+            border-radius: 5px;
+            border: 1px solid #dedddd;
+            font-weight: 400;
+            line-height: 18px;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s;
+            position: relative;
+            &:focus {
+                -webkit-box-shadow: inset 2px 3px 5px rgba(34, 35, 39, 0.3);
+                box-shadow: inset 2px 3px 5px rgba(34, 35, 39, 0.3);
+            }
+        }
+        textarea {
+            margin-top: 20px;
+            height: 100px;
+            resize: none;
+            width: 100%;
+            -webkit-box-shadow: inset 2px 3px 5px rgba(34, 35, 39, 0.09);
+            box-shadow: inset 2px 3px 5px rgba(34, 35, 39, 0.09);
+            border-radius: 5px;
+            border: 1px solid #dedddd;
+            font-weight: 400;
+            line-height: 18px;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s;
+            padding: 15px;
+            &:focus {
+                -webkit-box-shadow: inset 2px 3px 5px rgba(34, 35, 39, 0.3);
+                box-shadow: inset 2px 3px 5px rgba(34, 35, 39, 0.3);
+                outline: none;
+            }
+        }
+    }
+    &__input-name {
+        background: url(../img/people.svg)no-repeat left 16px center;
+    }
+    &__input-tel {
+        background: url(../img/tel.svg)no-repeat left 16px center;
+    }
+    &__btn {
+        margin: 20px auto 10px;
+        display: block;
+        padding: 20px 10px;
+        width: 250px;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 1199px){
@@ -136,8 +255,38 @@
         }
     }
 }
+@media screen and (max-width: 639px){
+    .reviews {
+        &__table {
+            width: 300px;
+        }
+        &__inputs {
+            flex-direction: column;
+            align-items: center;
+            input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            textarea {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 479px){
     .reviews {
+        &__popup {
+            overflow: scroll;
+        }
+        &__table {
+            margin-top: 20px;
+            top: 0;
+            transform: translateX(-50%);
+        }
+        &__popup-title {
+            font-size: 28px;
+        }
         &__btns {
             flex-direction: column;
             align-items: center;
@@ -151,10 +300,6 @@
         }
     }
 }
-
-
-
-
 
 
 

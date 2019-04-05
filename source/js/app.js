@@ -322,4 +322,11 @@ $('.reviews__left-btn').click(function(){
    $('.reviews__item_hide').toggleClass('active');
 });
 
+$('.reviews__right-btn').click(function(){
+    $('.reviews__popup').css('display','block');
+});
+
+$('.reviews__close').click(function(){
+   $('.reviews__popup').fadeOut();
+});
 
