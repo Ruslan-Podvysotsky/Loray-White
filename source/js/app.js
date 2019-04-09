@@ -267,6 +267,7 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 });
 
 
+
 $('.skintone-range').click(function () {
     $(this).siblings('.skintone-text').fadeOut();
     var num = $(this).siblings('img').attr('src');
@@ -274,6 +275,8 @@ $('.skintone-range').click(function () {
     var imgSrc = num.slice(0, -5) + value + '.png';
     $(this).siblings('img').attr('src', imgSrc);
 });
+
+
 
 
 let slider1 = $('.table__slider');
@@ -324,7 +327,7 @@ function counter() {
     var random =document.querySelector('.order__current');
 
     var count = new Date();
-    var countDay = count.getDay();
+    var countDay = count.getDate();
     var countMonth = count.getMonth() + 1;
     var countYear = count.getFullYear();
 
@@ -349,8 +352,7 @@ function counter() {
 
     function randomValue (min, max){
         var rand = min + Math.random() * (max + 1 - min);
-        rand = Math.floor(rand) + '';
-        
+        rand = Math.floor(rand) + '';       
 
         var arrRandom = [];
         for (var i = 0; i < rand.length; i++){
@@ -367,5 +369,19 @@ function counter() {
     randomValue(1000, 1500);
  
 }
-
 counter();
+
+
+$('.reviews__left-btn').click(function(){
+   $(this).toggleClass('active');
+   $('.reviews__item_hide').toggleClass('active');
+});
+
+$('.reviews__right-btn').click(function(){
+    $('.reviews__popup').css('display','block');
+});
+
+$('.reviews__close').click(function(){
+   $('.reviews__popup').fadeOut();
+});
+

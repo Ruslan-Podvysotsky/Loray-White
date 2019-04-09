@@ -277,29 +277,29 @@ input::-ms-clear {
 }
 
 ::-webkit-input-placeholder {
-  color: #bdc3ca;
+  color: #3c4452;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 ::-moz-placeholder {
-  color: #bdc3ca;
+  color: #3c4452;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* Firefox 19+ */
 :-moz-placeholder {
-  color: #bdc3ca;
+  color: #3c4452;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* Firefox 18- */
 :-ms-input-placeholder {
-  color: #bdc3ca;
+  color: #3c4452;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 
@@ -427,7 +427,7 @@ input::-ms-clear {
 
 @media screen and (max-width: 639px) {
   .section {
-    padding: 20px 0;
+    padding: 25px 0;
   }
 
   .wrapper {
