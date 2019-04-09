@@ -1,0 +1,187 @@
+.order {
+    padding-top: 75px;
+    padding-bottom: 79px;
+    &__cont {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+    }
+
+    &__item {
+        width: 348px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        &-numb{
+            position: absolute;
+            z-index: -1;
+            font-size: 200px;
+            color: #c1a6d9;
+            font-weight: bold;
+            left: 5px;
+            top: -80px;
+        }
+        &-img {
+            width: 294px;
+            height: 294px;
+            box-sizing: border-box;
+            border: 12px solid #eeeeee;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            & img {
+                width: 100%;
+                display: block;
+            }
+            &_bg{
+                background-color: #fff;
+            }
+        }
+
+        &-title {
+            margin-top: 35px;
+            font-size: 24px;
+            color: #2c2f35;
+            font-weight: bold;
+        }
+
+        &-desc {
+            margin-top: 11px;
+            color: #686c6f;
+            font-size: 18px;
+            width: 100%;
+        }
+    }
+
+    &__product {
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            width: 210px;
+            height: 170px;
+            background-image: url(../img/product_after.png);
+            background-size: 210px;
+            background-repeat: no-repeat;
+            position: absolute;
+            z-index: -1;
+            right: -90px;
+            top: -10px;
+        }
+
+        &-one {
+            width: 220px;
+        }
+
+        &-two {
+            position: absolute;
+            width: 130px;
+            top: 60px;
+            right: -8px;
+        }
+    }
+    &__info{
+        width: 530px;
+        margin: 58px auto 0;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #d7dee7;
+        padding-bottom: 23px;
+        &-desc{
+            color: #3c4452;
+            font-size: 24px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+    }
+    &__current{
+        margin: 0 8px;
+    }
+}
+.date{
+    margin: 0 8px;
+}
+.date__day-value{
+    width: 18px;
+    height: 29px;
+    padding: 0 2px;
+    background: linear-gradient(to bottom, rgba(245,246,247,1) 0%,rgba(248,248,249,1) 50%,rgba(238,241,245,1) 100%);
+    font-size: 26px;
+    color: #000000;
+    font-weight: 500;
+    border-radius: 3px;
+    margin: 0 1px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 3px 5px 1px rgba(191,191,191,1);
+    &::before{
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #e5e3e7;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
+
+@media screen and (max-width: 1023px){
+    .order__item{
+        width: 305px;
+        &:nth-child(3){
+            margin-top: 40px;
+        }
+    }
+    .order__cont{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+    .order__item-numb {
+        font-size: 160px;
+        left: 0px;
+        top: -60px;
+    }
+    .order__item-title{
+        font-size: 21px;
+        margin-top: 15px;
+    }
+    .order__item-desc{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .order__info{
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 639px){
+    .order__item:nth-child(2){
+        margin-top: 40px;
+    }
+    .order__info{
+        width: 100%;
+    }
+    .order__info-desc{
+        flex-direction: column;
+        align-items: center;
+    }
+    .date{
+        margin: 10px 0;
+    }
+    .order__current{
+        margin: 10px 0;
+    }
+    .order__item {
+        width: 300px;
+    }
+}

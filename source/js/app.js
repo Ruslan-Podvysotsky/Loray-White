@@ -267,6 +267,7 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 });
 
 
+
 $('.skintone-range').click(function () {
     $(this).siblings('.skintone-text').fadeOut();
     var num = $(this).siblings('img').attr('src');
@@ -274,6 +275,8 @@ $('.skintone-range').click(function () {
     var imgSrc = num.slice(0, -5) + value + '.png';
     $(this).siblings('img').attr('src', imgSrc);
 });
+
+
 
 
 let slider1 = $('.table__slider');
@@ -316,6 +319,58 @@ function showSlider() {
 };
 showSlider();
 $(window).on('resize', showSlider);
+
+function counter() {
+    var day = document.querySelector('.date__day');
+    var month = document.querySelector('.date__month');
+    var year = document.querySelector('.date__year');
+    var random =document.querySelector('.order__current');
+
+    var count = new Date();
+    var countDay = count.getDate();
+    var countMonth = count.getMonth() + 1;
+    var countYear = count.getFullYear();
+
+    function pushValue(cont, val) {
+        val += '';
+        if (val < 10) val = "0" + val;
+
+        var arr = [];
+        for (var i = 0; i < val.length; i++) {
+            arr.push(val.charAt(i));
+        }
+            
+        var arrTwo = [];
+        for (var b = 0; b < arr.length; b++){
+            arrTwo.push('<span class="date__day-value">' + arr[b] +'</span>');
+        }
+        cont.innerHTML = arrTwo.join('');
+    }
+    pushValue(day, countDay);
+    pushValue(month, countMonth);
+    pushValue(year, countYear);
+
+    function randomValue (min, max){
+        var rand = min + Math.random() * (max + 1 - min);
+        rand = Math.floor(rand) + '';       
+
+        var arrRandom = [];
+        for (var i = 0; i < rand.length; i++){
+            arrRandom.push(rand.charAt(i));
+        }
+    
+        var arrRandomPush = [];
+        for(var b = 0; b < arrRandom.length; b++){
+            arrRandomPush.push('<span class="date__day-value">' + arrRandom[b] +'</span>');
+        }
+
+        random.innerHTML = arrRandomPush.join('');
+    }
+    randomValue(1000, 1500);
+ 
+}
+counter();
+
 
 $('.reviews__left-btn').click(function(){
    $(this).toggleClass('active');
