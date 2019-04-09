@@ -87,20 +87,31 @@
             </button>
         </div>
     </div>
-    <div class="reviews__popup">
+    <div class="reviews__popup reviews__popup-screen">
         <div class="reviews__table">
             <div class="reviews__close"></div>
             <h2 class="reviews__popup-title">
                 Оставить отзыв
             </h2>
-            <form class="reviews__inputs">
+            <div class="reviews__inputs">
                 <input type="text" required class="reviews__input-name" placeholder="Ваше имя">
                 <input type="tel" required class="reviews__input-tel" placeholder="Ваш телефон">
                 <textarea name="" id="" cols="30" rows="10" placeholder="Текст отзыва..."></textarea>
                 <button class="btn reviews__btn">
                     Добавить отзыв
                 </button>
-            </form>
+            </div>
+        </div>
+    </div>
+    <div class="reviews__thanks reviews__popup-screen">
+        <div class="reviews__table">
+            <div class="reviews__close"></div>
+            <p class="reviews__thanks-text">
+                Отзыв отправлен на модерацию. Спасибо!
+            </p>
+            <p class="reviews__bad-words">
+                Нецензурная лексика или реклама будут удалены.
+            </p>
         </div>
     </div>
 </section>

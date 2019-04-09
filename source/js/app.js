@@ -328,5 +328,22 @@ $('.reviews__right-btn').click(function(){
 
 $('.reviews__close').click(function(){
    $('.reviews__popup').fadeOut();
+   $('.reviews__popup-screen').fadeOut();
 });
 
+
+$('.reviews__btn').click(function(){
+    let name = $('.reviews__input-name');
+    let phone = $('.reviews__input-tel');
+   if (name.val() && phone.val()) {
+       $('.reviews__popup-screen').fadeOut();
+       $('.reviews__thanks').fadeIn();
+   } else {
+       if (!name.val()){name.css('border','2px solid red');}
+       if (!phone.val()){phone.css('border','2px solid red');}
+   }
+});
+
+$('.reviews__inputs input').click(function(){
+    $(this).css('border', '1px solid #dedddd' );
+});
