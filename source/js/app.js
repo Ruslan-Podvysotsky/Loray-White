@@ -268,7 +268,7 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 
 
 
-$('.skintone-range').click(function () {
+$('.skintone-range').change(function () {
     $(this).siblings('.skintone-text').fadeOut();
     var num = $(this).siblings('img').attr('src');
     var value = $(this).val();
@@ -402,3 +402,26 @@ $('.reviews__btn').click(function(){
 $('.reviews__inputs input').click(function(){
     $(this).css('border', '1px solid #dedddd' );
 });
+
+
+
+// ------------------------------------------calc-popup
+
+$('.calc-btn').click(function(){
+    let a = $('.skintone-left__range').val();
+    let b = $('.skintone-right__range').val();
+    let c = Math.abs(a - b);
+    if (c <= 2) {
+        $('.calc').removeClass('more').fadeIn();
+    } else {
+        $('.calc').addClass('more').fadeIn();
+    }
+});
+
+$('.calc__close').click(function(){
+   $('.calc').fadeOut();
+});
+
+
+
+

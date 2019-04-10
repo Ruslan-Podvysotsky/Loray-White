@@ -52,6 +52,17 @@
             font-weight: 700;
         }
     }
+    @media screen and (min-width:0\0) {
+        .composition {
+            &__name {
+                width: 100%;
+            }
+            &__text {
+                width: 100%;
+            }
+        }
+    }
+
     &__text_first {
         margin-top: 53px;
         width: 570px;
@@ -136,7 +147,7 @@
         .composition__img {
             position: absolute;
             left: -64px;
-            top: 80px;
+            top: 115px;
         }
         img {
             max-width: none;
@@ -241,7 +252,7 @@
         &__item_3-push {
             .composition__img {
                 left: -64px;
-                top: 61px;
+                top: 83px;
             }
         }
         &__row {
@@ -367,17 +378,54 @@
                 }
             }
         }
+        &__row {
+            .composition__name_first {
+                width: 100%;
+                text-align: justify;
+            }
+            .composition__item_2-push + .composition__item {
+                margin-top: 0;
+            }
+        }
+        &__item_2-push + .composition__item {
+            .composition__name {
+                padding-bottom: 37px;
+                width: 100%;
+            }
+        }
+        &__row_third {
+            .composition__item_3-thin {
+                margin-top: 0;
+            }
+        }
+        &__item_3-thin {
+            .composition__name {
+                margin-top: 0;
+                padding-bottom: 37px;
+            }
+        }
+        &__item_3-push {
+            .composition__name {
+                padding-bottom: 13px;
+            }
+        }
     }
 }
 @media screen and (max-width: 767px){
     .composition {
-        &__bg1 {
-            display: none;
-        }
         &__row {
             .composition__name_first {
                 width: 100%;
                 font-size: 20px;
+            }
+        }
+        &__bg1 {
+            img {
+                position: absolute;
+                width: 250px;
+                left: calc(50%);
+                transform: translateX(-50%);
+                top: 50px;
             }
         }
         &__name1 {
@@ -385,6 +433,7 @@
         }
         &__text_first {
             width: 100%;
+            margin-top: 230px;
         }
         &__prod {
             img {
@@ -411,12 +460,14 @@
         }
         &__item_3-thin {
             .composition__name {
-                margin-top: 22px;
+                margin-top: 0px;
+                padding-bottom: 35px;
             }
         }
         &__item_2-push + .composition__item {
             .composition__name {
                 width: 100%;
+                padding-bottom: 35px;
             }
         }
         &__item_3-push {
@@ -425,6 +476,7 @@
             }
             .composition__img {
                 left: -45px;
+                top: 77px;
             }
         }
     }
@@ -436,13 +488,11 @@
                 margin-top: 10px;
             }
         }
-        &__prod {
+
+        &__bg1 {
             img {
-                transform: translateX(5%);
+                top: 80px;
             }
-        }
-        &__text_first {
-            margin-top: 10px;
         }
         &__prod2 {
             img {
@@ -460,8 +510,43 @@
         &__prod {
             img {
                 width: 290px;
+                transform: translateX(5%);
+            }
+        }
+        &__row {
+            .composition__name_first {
+                text-align: left;
+            }
+        }
+        &__row_third {
+            margin-top: 20px;
+        }
+        &__row {
+            .composition__item_2-push + .composition__item {
+                margin-top: 20px;
+            }
+        }
+        &__item_3-thin {
+            .composition__name {
+                margin-top: 20px;
+            }
+        }
+        &__row {
+            .composition__item {
+                .composition__name {
+                    padding-bottom: 13px;
+                }
             }
         }
     }
 }
 
+@media screen and (max-width: 347px){
+    .composition {
+        &__bg1 {
+            img {
+                top: 105px;
+            }
+        }
+    }
+}

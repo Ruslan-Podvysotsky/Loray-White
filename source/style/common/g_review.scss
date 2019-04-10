@@ -290,6 +290,11 @@
                 font-size: 18px;
             }
         }
+        &__thanks {
+            .reviews__table {
+                width: 300px;
+            }
+        }
     }
 }
 @media screen and (max-width: 639px){
