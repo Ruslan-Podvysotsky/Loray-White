@@ -5,6 +5,18 @@
     background-position: left top;
     padding-top: 96px;
     padding-bottom: 94px;
+    .wrapper {
+        position: relative;
+    }
+    &__link-scroll {
+        position: absolute;
+        display: block;
+        width: 154px;
+        height: 30px;
+        top: -90px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     &__cont{
         width: 100%;
         display: flex;

@@ -390,16 +390,18 @@ $('.reviews__close').click(function(){
 $('.reviews__btn').click(function(){
     let name = $('.reviews__input-name');
     let phone = $('.reviews__input-tel');
-   if (name.val() && phone.val()) {
+    let text = $('.reviews__textarea');
+    if (name.val() && phone.val() && text.val()) {
        $('.reviews__popup-screen').fadeOut();
        $('.reviews__thanks').fadeIn();
    } else {
        if (!name.val()){name.css('border','2px solid red');}
        if (!phone.val()){phone.css('border','2px solid red');}
+       if (!text.val()){text.css('border','2px solid red');}
    }
 });
 
-$('.reviews__inputs input').click(function(){
+$('.reviews__alarm').click(function(){
     $(this).css('border', '1px solid #dedddd' );
 });
 

@@ -1,6 +1,18 @@
 .table {
     background-color: #f0f0f0;
     padding: 84px 0 113px;
+    .wrapper {
+        position: relative;
+    }
+    &__link-scroll {
+        position: absolute;
+        display: block;
+        width: 154px;
+        height: 30px;
+        top: -79px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     &__subtitle {
         color: #8c9192;
         font-size: 24px;
